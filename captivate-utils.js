@@ -21,7 +21,10 @@ cp.utils = {
 	disablePlaybarSlider: function() {
 		document.getElementsByClassName('playbarSliderThumb')[0].style.display='none'
 		if (!cp.utils._jumpToFrame) cp.utils._jumpToFrame = cp.playbar.mainMovie.jumpToFrame
-		cp.playbar.mainMovie.jumpToFrame = function() {}
+		cp.playbar.mainMovie.jumpToFrame = function(a) {
+			var callerIsNotPlaybar = new Error().stack.indexOf('PlayBarSlider.moveSlider') == -1
+			if (callerIsNotPlaybar) cp.utils._jumpToFrame.call(cp.playbar.mainMovie, a)
+		}
 	},
 	enablePlaybarSlider: function() {
 		document.getElementsByClassName('playbarSliderThumb')[0].style.display=''
