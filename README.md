@@ -28,7 +28,7 @@ Preview your project in HTML5 browser, press F12 to open your browser's dev tool
 1. Click the `Select Window` and choose `Current`
 1. To add a new action, type `Ctrl-n`
 1. From the dropdown, choose `Continue`
-1. Select every slide in you project and set the 'On Enter' action to 'Execute Advanced Actions', then choose `DisablePlaybarSlider`.
+1. Select every slide in your project and set the 'On Enter' action to 'Execute Advanced Actions', then choose `DisablePlaybarSlider`.
 
 #### Mark All Slides as Viewed
 
